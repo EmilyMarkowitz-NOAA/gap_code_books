@@ -1,0 +1,46 @@
+---
+title: "AFSC Groundfish Survey Codes"
+output:
+  word_document:
+    reference_docx: styles_reference.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, comment = FALSE)
+```
+
+## Vessels
+
+`r table_metadata0$comments[table_metadata0$table_name == "VESSELS"] `
+
+`r paste(paste0(" - ", column_metadata0$comments[column_metadata0$table_name == "VESSELS"]), collapse = "\n\n") `
+
+```{r}
+ft <- vessels0 %>% 
+  # data wrangle
+  dplyr::select(vessel_id, name, country_id) %>% 
+  dplyr::mutate(name = stringr::str_to_title(name)) %>%
+  dplyr::arrange(country_id) %>% 
+  # flextable
+  flextable::as_grouped_data(x = ., groups = c(#"SRVY", 
+    "country_id"), 
+    columns = NULL) %>% 
+  flextable::as_flextable(x = ., hide_grouplabel = FALSE) %>% 
+  flextable::bold(x = ., j = 1, i = ~ !is.na(country_id) ) %>%
+  flextable::italic(x = ., j = "name") %>%
+  flextable::width(x = ., j = "vessel_id", width = 1) %>% 
+  flextable::width(x = ., j = "name", width = 2) %>% 
+  flextable::set_header_labels(.,
+                               name = "Vessel name", 
+                               vessel_id = "Vessel ID") %>%
+  flextable::padding(x = .,
+                     padding.left = 2) %>%
+  flextable::padding(x = .,
+                     j = 1, i = ~ is.na(country_id),
+                     padding.left = 5) %>% 
+  flextable::fontsize(x = ., size = 9)
+
+ft
+
+```
+
