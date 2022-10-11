@@ -1,6 +1,4 @@
-# Reproducibly Developing Species and Gear Code Reference Books {gap_code_books}
-
-# GAPsurvey <a href={https://afsc-gap-products.github.io/gap_code_books}><img src="https://user-images.githubusercontent.com/75965120/194981561-345f5828-3658-4ad6-9205-d51879dae8b7.png" align="right" width=139 height=139 alt="NOAA Fisheries report" />
+# Reproducibly Developing Species and Gear Code Reference Books {gap_code_books} <a href={https://afsc-gap-products.github.io/gap_code_books}><img src="https://user-images.githubusercontent.com/75965120/194981561-345f5828-3658-4ad6-9205-d51879dae8b7.png" align="right" width=139 height=139 alt="NOAA Fisheries report" />
 
 > Code is always in development. Please refer to releases for final products. 
 
