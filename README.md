@@ -8,7 +8,7 @@
 
 **Emily Markowitz** (Emily.Markowitz AT noaa.gov; @EmilyMarkowitz-NOAA)
 
-**Liz Dawson** (Nancy.Roberson AT noaa.gov; @NancyRoberson)
+**Nancy Roberson** (Nancy.Roberson AT noaa.gov; @NancyRoberson)
 
 Alaska Fisheries Science Center,
 
